@@ -3,6 +3,7 @@ services:
 
   # The Application
   app:
+    image: "chr/php-fpm-npm-composer:v1.0"
     build:
       context: ./
       dockerfile: app.dockerfile
@@ -17,6 +18,7 @@ services:
 
   # The Web Server
   web:
+    image: "chr/nginx:v1.0"
     build:
       context: ./
       dockerfile: web.dockerfile
